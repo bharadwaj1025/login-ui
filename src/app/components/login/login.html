@@ -1,0 +1,43 @@
+<div class="login-wrapper">
+  <div class="login-card card shadow-lg p-4">
+    <div class="card-body">
+      <h3 class="text-center mb-4 text-primary">Welcome Back</h3>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="email"
+              required
+              class="form-control"
+              placeholder="Enter your email"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              [(ngModel)]="password"
+              required
+              class="form-control"
+              placeholder="Enter your password"
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+      </form>
+      <div class="text-center mt-3">
+        <a>#Forgot password?</a>
+      </div>
+    </div>
+  </div>
+</div>
